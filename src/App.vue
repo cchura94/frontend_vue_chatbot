@@ -11,7 +11,13 @@
   </div>
   <button v-on:click="enviarMensaje()">ENVIAR MENSAJE</button>
   <button @click="enviarMensaje()">ENVIAR MENSAJE 2</button>
-  
+
+  <hr>
+
+  <input type="file" @change="seleccionarImagen">
+  <textarea v-model="datos.caption"></textarea>
+<button type="button" @click="enviarImagen()">Enviar Imagen</button>
+
 </template>
 
 <script setup>
@@ -19,6 +25,7 @@
   import mensajeService from "./services/mensaje.service"
 
   const datos = ref({nro_whastsapp: '', mensaje: ''})
+  const img = ref(null)
 
 
   async function enviarMensaje(){
@@ -37,6 +44,20 @@
     })
     */
   } 
+
+  function seleccionarImagen(e){
+    console.log(e.target.files[0]);
+    img.value = e.target.files[0];
+
+  }
+  async function enviarImagen(){
+    const fd = new FormData();
+    fd.append("imagen", img.value);
+    fd.append("nro_whastsapp", datos.value.nro_whastsapp);
+    fd.append("caption", datos.value.caption);
+
+    await mensajeService.enviarMensajeImagen(fd)
+  }
 
 </script>
 
