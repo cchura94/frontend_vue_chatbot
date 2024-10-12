@@ -6,5 +6,8 @@ export default {
     },
     enviarMensajeImagen(datos){
         return Api().post('/mensaje/imagen', datos);
+    },
+    enviarMensajeBoton(datos){
+        return Api().post('/mensaje/button', datos);
     }
 }

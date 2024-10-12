@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const url_backend = "http://127.0.0.1:3001";
+const url_backend = "https://e704-189-28-91-238.ngrok-free.app/";
 // const url_backend = "https://botnode.blumbit.net";
 
 export default function Api(){

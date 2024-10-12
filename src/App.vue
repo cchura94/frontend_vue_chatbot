@@ -18,6 +18,8 @@
   <textarea v-model="datos.caption"></textarea>
 <button type="button" @click="enviarImagen()">Enviar Imagen</button>
 
+<button type="button" @click="enviarBoton()">Enviar Botones</button>
+
 </template>
 
 <script setup>
@@ -57,6 +59,10 @@
     fd.append("caption", datos.value.caption);
 
     await mensajeService.enviarMensajeImagen(fd)
+  }
+
+  const enviarBoton = async () => {
+    await mensajeService.enviarMensajeBoton(datos.value)
   }
 
 </script>
