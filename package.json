@@ -10,10 +10,22 @@
   },
   "dependencies": {
     "axios": "^1.7.7",
-    "vue": "^3.4.37"
+    "vue": "^3.4.37",
+    "vue-router": "^4.4.5",
+    "@primevue/themes": "^4.0.0",
+        "chart.js": "3.3.2",
+        "primeicons": "^6.0.1",
+        "primevue": "^4.0.0"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.1.2",
-    "vite": "^5.4.1"
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.14",
+    "vite": "^5.4.1",
+    "@primevue/auto-import-resolver": "^4.0.1",
+"sass": "^1.55.0",
+"tailwindcss-primeui": "^0.3.2",
+"unplugin-vue-components": "^0.27.3"
   }
 }
