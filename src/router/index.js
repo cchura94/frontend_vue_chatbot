@@ -5,6 +5,10 @@ import Servicios from './../views/web/Servicios.vue'
 import Pruebas from './../views/admin/whatsapp/Pruebas.vue'
 import AppLayout from '@/layout/AppLayout.vue';
 
+import MensajeTexto from '@/views/admin/mensajes/MensajeTexto.vue'
+
+import MensajeImagen from '@/views/admin/mensajes/MensajeImagen.vue'
+
 
 const routes = [
   {
@@ -12,6 +16,14 @@ const routes = [
     component: AppLayout,
     children: [
       { path: 'pruebas', component: Pruebas },
+      {
+        path: 'texto',
+        component: MensajeTexto
+      },
+      {
+        path: 'imagen',
+        component: MensajeImagen
+      }
     ]
     
   },

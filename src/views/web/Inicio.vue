@@ -8,7 +8,7 @@
         <button @click="pregunta = ''">Limpiar</button>
 
         <div v-if="respuesta" class="respuesta">
-            {{ respuesta }}
+            <h4>{{ respuesta }}</h4>
         </div>
     </div>
 </template>
@@ -89,5 +89,6 @@ h3 {
     border: 1px solid #b3d7ff;
     border-radius: 4px;
     color: #333;
+    font-size: 1.5em;
 }
 </style>
